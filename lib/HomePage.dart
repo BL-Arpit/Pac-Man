@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:ffi';
+// import 'dart:ffi';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+// import 'package:flutter/rendering.dart';
 import 'package:packman/ghost.dart';
 import 'package:packman/ghost3.dart';
 import 'package:packman/ghost2.dart';
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                   title: Center(child: Text("Game Over!")),
                   content: Text("Your Score : " + (score).toString()),
                   actions: [
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {
                         audioInGame.loop('pacman_beginning.wav');
                         setState(() {
@@ -185,8 +185,6 @@ class _HomePageState extends State<HomePage> {
                           Navigator.pop(context);
                         });
                       },
-                      textColor: Colors.white,
-                      padding: const EdgeInsets.all(0.0),
                       child: Container(
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
